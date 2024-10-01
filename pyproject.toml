@@ -4,9 +4,10 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "asaas-sdk"
-version = "3.3.1"
+version = "3.4.0"
 authors = [
   { name="Gabriel Niziolek", email="ganiziolek@gmail.com" },
+  { name="Paulo Rodrigues", email="pauloxat8@gmail.com" },
 ]
 description = " Biblioteca não oficial de comunicação com a API de pagamento do ASAAS"
 keywords = ["asaas", "sdk", "payment"]
@@ -25,5 +26,5 @@ dependencies = [
 ]
 
 [project.urls]
-"Homepage" = "https://github.com/GaNiziolek/asaas-sdk"
-"Bug Tracker" = "https://github.com/GaNiziolek/asaas-sdk/issues"
+"Homepage" = "https://github.com/xlaming/asaas-sdk"
+"Bug Tracker" = "https://github.com/xlaming/asaas-sdk/issues"

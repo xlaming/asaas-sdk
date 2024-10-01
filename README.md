@@ -94,6 +94,13 @@ print(pagamento)
 
 ```py
 
+pagamento = asaas.payments.update(
+        id = "pay_6954209428403553",
+        billingType = BillingType.PIX,
+        value = 100,
+        dueDate = date.today()
+    )
+
 pagamento = asaas.payments.new(
         customer = new_customer,
         billingType = BillingType.PIX,
@@ -109,4 +116,33 @@ pix_info = asaas.payments.get_pix_qr(pagamento.id)
 print(pix_info)
 # 'Pix(success=True, expirationDate=2023-04-27 23:59:59, payload=00020101021226820014br.gov.bcb.pix2560qrpix-...)'
 
+```
+
+#### Assinaturas
+
+
+```py
+
+assinatura = asaas.subscriptions.update(
+        id = "sub_VXJBYgP2u0eO",
+        billingType = BillingType.PIX,
+        value = 100,
+        nextDueDate = date.today(),
+        cycle = Cycle.MONTHLY
+    )
+
+assinatura = asaas.subscriptions.new(
+        customer = new_customer,
+        billingType = BillingType.PIX,
+        value = 100,
+        nextDueDate = date.today(),
+        cycle = Cycle.MONTHLY
+    )
+
+print(assinatura)
+# Subscription(id=sub_VXJBYgP2u0eO, customer=Customer(id=cus_000005263646, name=Roberto, email=None), billingType=PIX, value=100)
+
+asaas.subscriptions.delete(
+    id = "sub_VXJBYgP2u0eO"
+)
 ```
